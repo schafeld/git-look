@@ -4,7 +4,9 @@ import UserView from '@/views/UserView'
 import VUserSearchForm from '@/components/VUserSearchForm'
 import VUserProfile from '@/components/VUserProfile'
 import initialState from '@/store/state'
-import userFixture from './fixtures/userFixture'
+import actions from '@/store/actions'
+import userFixture from './fixtures/user'
+jest.mock('@/store/actions')
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
@@ -15,7 +17,10 @@ describe('UserView', () => {
   const build = () => {
     const wrapper = shallowMount(UserView, {
       localVue,
-      store: new Vuex.Store({ state })
+      store: new Vuex.Store({
+        state,
+        actions
+      })
     })
 
     return {
@@ -26,6 +31,7 @@ describe('UserView', () => {
   }
 
   beforeEach(() => {
+    jest.resetAllMocks()
     state = { ...initialState }
   })
 
@@ -38,11 +44,15 @@ describe('UserView', () => {
 
   it('renders main child components', () => {
     // arrange
-    const { userSearchForm, userProfile } = build()
+    const expectedUser = 'schafeld'
+    const { userSearchForm } = build()
+
+    // act
+    userSearchForm().vm.$emit('submitted', expectedUser)
 
     // assert
-    expect(userSearchForm().exists()).toBe(true)
-    expect(userProfile().exists()).toBe(true)
+    expect(actions.SEARCH_USER).toHaveBeenCalled()
+    expect(actions.SEARCH_USER.mock.calls[0][1]).toEqual({ username: expectedUser })
   })
 
   it('passes a bound user prop to user profile component', () => {
