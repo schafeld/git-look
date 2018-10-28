@@ -45,4 +45,4 @@ So far this is a 'code-along' based on a [Vue.js TDD tutorial](https://medium.co
 
 # TODO
 
-check back on October, 24th
+check back on October, 31st
