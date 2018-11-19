@@ -7,16 +7,16 @@ export default {
   name: 'UserView',
   components: {
     VUserSearchForm,
-    VUserProfile,
+    VUserProfile
   },
   methods: {
-    searchUser(username) {
+    searchUser (username) {
       this.$store.dispatch('SEARCH_USER', { username })
     }
   },
   computed: {
     ...mapState({
-      user: 'user',
+      user: 'user'
     })
   }
 }
