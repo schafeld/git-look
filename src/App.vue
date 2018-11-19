@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <p>This is where the app will go...</p>
+    <p>Git Look 🔭</p>
     <router-view/>
   </div>
 </template>
