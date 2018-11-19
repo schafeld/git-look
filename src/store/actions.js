@@ -1,7 +1,7 @@
 import api from '@/api'
 
 export default {
-  SEARCH_USER({ commit }, { username }) {
+  SEARCH_USER ({ commit }, { username }) {
     return new Promise(async (resolve, reject) => {
       try {
         const user = await api.searchUser(username)
