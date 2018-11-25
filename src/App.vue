@@ -1,8 +1,10 @@
 <template>
-  <div id="app">
-    <p>Git Look 🔭</p>
-    <router-view/>
-  </div>
+  <el-container>
+    <el-main>
+      <p>Git Look 🔭</p>
+      <router-view/>
+    </el-main>
+  </el-container>
 </template>
 
 <style>
