@@ -45,4 +45,4 @@ So far this is a 'code-along' based on a [Vue.js TDD tutorial](https://medium.co
 
 # TODO
 
-Tutorial in progress, part 5 announced for November, 12th.
+Tutorial in progress, part 6 announced for November, 26th.
