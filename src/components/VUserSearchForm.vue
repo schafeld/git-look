@@ -11,8 +11,17 @@ export default {
 
 <template>
   <form @submit.prevent="$emit('submitted', username)">
-    <label for="male">Git Username: </label>
-    <input type="text" v-model="username" id="username" />
-    <button type="submit">Submit</button>
+    <el-input
+      placeholder="Git user name"
+      v-model="username"
+      class="search-form__input"
+    >
+      <el-button
+        class="search-form__button"
+        native-type="submit"
+        slot="append"
+        icon="el-icon-search"
+      ></el-button>
+    </el-input>
   </form>
 </template>

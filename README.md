@@ -43,6 +43,11 @@ npm run test:unit
 
 So far this is a 'code-along' based on a [Vue.js TDD tutorial](https://medium.com/magnetis-backstage/working-an-application-in-vue-js-with-tdd-an-extensive-guide-for-people-who-have-time-part-1-3be791dafa2b). It should at some point deviate from the [tutorial's source repository](https://github.com/kuroski/article-tdd-vue).
 
+# Developer tips
+
+Clear Jest's chache if odd testing errors occur and update ('u') snapshots
+``` npx jest --clearCache ``` 
+
 # TODO
 
 Tutorial in progress, part 6 announced for November, 26th.

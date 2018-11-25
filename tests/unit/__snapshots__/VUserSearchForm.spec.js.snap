@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VUserSearchForm renders the component 1`] = `<form><label for="male">Git Username: </label> <input type="text" id="username"> <button type="submit">Submit</button></form>`;
+exports[`VUserSearchForm renders the component 1`] = `
+<form>
+  <elinput-stub value="" type="text" autocomplete="off" validateevent="true" placeholder="Git user name" class="search-form__input">
+    <elbutton-stub type="default" icon="el-icon-search" nativetype="submit" class="search-form__button"></elbutton-stub>
+  </elinput-stub>
+</form>
+`;
