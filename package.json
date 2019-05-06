@@ -8,7 +8,9 @@
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit",
-    "test:unit:watch": "vue-cli-service test:unit --watchAll"
+    "test:unit:watch": "vue-cli-service test:unit --watchAll",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -16,7 +18,8 @@
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.1.1",
@@ -32,5 +35,6 @@
     "flush-promises": "^1.0.2",
     "nock": "^10.0.2",
     "vue-template-compiler": "^2.5.17"
-  }
+  },
+  "snyk": true
 }
